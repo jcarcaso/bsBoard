@@ -8,7 +8,13 @@ foam.CLASS({
       name: 'date',
       factory: function() { return new Date() },
     },
-    'name',
+    {
+      class: 'String',
+      name: 'name',
+      preSet: function(_, n) {
+        return n.toUpperCase();
+      },
+    },
     {
       name: 'phoneNumber',
     },
